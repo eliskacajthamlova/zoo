@@ -16,16 +16,54 @@
 
 
 # Tuto část dopiš
+zoo = {"tygr": 0, "lev": 0, "opice": 0}
 
 #def pridej(zvire, pocet):
+def pridej(zvire, pocet):
+    if zvire in zoo and pocet > 0 :
+        zoo[zvire] += pocet
+    else:
+        print("neco je spatnee")
     
 #def odeber(zvire, pocet):
+def odeber(zvire, pocet):
+    if zvire in zoo and 0 < pocet <= zoo[zvire]:
+        zoo[zvire] -= pocet
+    else:
+        print("neco je opet spatne")
     
 #def vypis():
+def vypis():
+    print("zvirata v zoo:")
+    for zvire, pocet in zoo. items():
+        print(f"{zvire}: {pocet}")
+
+while True:
+    print("n1 - pridat zvire n2 - odebrat zvire n3 - vypsat zvirata n4 - konec")
+    volba = input("vvyber akci:")
+
+if volba == "1":
+    zvire = input("zadej zvire(tygr,lev,opice):")
+    pocetzvirat = int(input("zadej pocet:"))
+    pridej(zvire, pocet)
+
+elif == volba "2":
+    zvire = input("zadej zvire(tygr,lev,opice):").strip().lower()
+    pocet = int(input("zadej pocet:"))
+    odeber(zvire, pocet)
+
+elif volba == "3":
+    vypis()
+
+elif volba == "4":
+    print("ukoncuji program.")
+    break
+
+else:
+    print("neplatna volba, zkus to znovu.")
+
+
     
-
-
-
 
 # Tuto část nepřepisovat
 
